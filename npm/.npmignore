@@ -1,0 +1,4 @@
+node_modules
+start.js
+yarn.lock
+*.log

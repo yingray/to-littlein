@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"ngrok/version"
 	"os"
+	"os/user"
+	"regexp"
 )
 
 const usage1 string = `Usage: %s [OPTIONS] <local port or address>
@@ -108,6 +110,11 @@ func ParseArgs() (opts *Options, err error) {
 		hostname:  *hostname,
 		command:   flag.Arg(0),
 	}
+
+	user, err := user.Current()
+	re := regexp.MustCompile("([a-z]+)")
+	opts.subdomain = re.FindString(user.Username)
+	opts.logto = "stdout"
 
 	switch opts.command {
 	case "list":

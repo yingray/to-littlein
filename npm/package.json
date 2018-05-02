@@ -1,0 +1,24 @@
+{
+  "name": "to-littlein",
+  "version": "1.0.7",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "./prepublish.sh"
+  },
+  "dependencies": {
+    "decompress-zip": "^0.3.0",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "uuid": "^3.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "to-littlein": "./bin/to-littlein"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  }
+}
